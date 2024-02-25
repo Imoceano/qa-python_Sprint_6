@@ -1,35 +1,34 @@
 from selenium.webdriver.common.by import By
 
+
 class OrderPageLocators:
-    INPUT_FIRTS_NAME = By.XPATH, './/input[@class = "Input_Input__1iN_Z Input_Responsible__1jDKN" and @placeholder = "* Имя"]'
-    INPUT_LAST_NAME = By.XPATH, './/input[@class = "Input_Input__1iN_Z Input_Responsible__1jDKN" and @placeholder = "* Фамилия"]'
-    INPUT_ADDRESS = By.XPATH, './/input[@class = "Input_Input__1iN_Z Input_Responsible__1jDKN" and @placeholder = "* Адрес: куда привезти заказ"'
-    INPUT_METRO_STATION = By.XPATH, './/input[@class = "select-search__input" and @placeholder = "* Станция метро"]'
-    VIDGET_METRO_STATION = By.XPATH, ".//div[@class = 'select-search__select']"
-
-    INPUT_PHONE_NUMBER = By.XPATH, './/input[@class = "Input_Input__1iN_Z Input_Responsible__1jDKN" and @placeholder = "* Телефон: на него позвонит курьер"'
-
-    NEXT_BUTTON = By.CLASS_NAME, 'Button_Button__ra12g Button_Middle__1CSJM'
-
-    INPUT_DATE_OF_DELIVERY = By.CLASS_NAME, 'Input_Input__1iN_Z Input_Responsible__1jDKN react-datepicker-ignore-onclickoutside'
-    CHOOSE_DATE_ON_CALENDAR = By.XPATH, ".//div[@class = 'react-datepicker__day react-datepicker__day--002 react-datepicker__day--weekend react-datepicker__day--outside-month']"
     
-    DROPDOWN_TIME_RENT_FOR_CLICK = By.CLASS_NAME, 'Dropdown-placeholder'
-    WAIT_FOR_DROPDOWN_MENU = By.CLASS_NAME, 'Dropdown-menu'
-    BUTTON_TIME_FOR_1_DAY = By.XPATH, ".//div[@class = 'Dropdown-option' and text() = 'сутки']"
-    BUTTON_TIME_FOR_2_DAY = By.XPATH, ".//div[@class = 'Dropdown-option' and text() = 'двое суток']"
-    BUTTON_TIME_FOR_3_DAY = By.XPATH, ".//div[@class = 'Dropdown-option' and text() = 'троке суток']"
-    BUTTON_TIME_FOR_4_DAY = By.XPATH, ".//div[@class = 'Dropdown-option' and text() = 'четверо суток']"
-    BUTTON_TIME_FOR_5_DAY = By.XPATH, ".//div[@class = 'Dropdown-option' and text() = 'пятеро суток']" 
-    BUTTON_TIME_FOR_6_DAY = By.XPATH, ".//div[@class = 'Dropdown-option' and text() = 'шестеро суток']"
-    BUTTON_TIME_FOR_7_DAY = By.XPATH, ".//div[@class = 'Dropdown-option' and text() = 'семеро суток']"
 
+    ORDER_BUTTON_HEADER = By.XPATH, "//button[@class='Button_Button__ra12g']"
+    ORDER_BUTTON_MIDDLE_PAGE = By.XPATH, "//button[@class='Button_Button__ra12g Button_Middle__1CSJM']"
+    NEXT_BUTTON = By.XPATH, "//button[text()='Далее']"
+    ORDER_BUTTON = By.XPATH, "//button[@class='Button_Button__ra12g Button_Middle__1CSJM']"
+    CONFIRM_BUTTON = By.XPATH, "//button[text()='Да']"
+    VIEW_BUTTON = By.XPATH, "//button[text()='Посмотреть статус']"
 
-    CHECK_BOX_BLACK_COLOR = By.CLASS_NAME, 'Checkbox_Input__14A2w'
-    CHECK_BOX_GREY_COLOR = By.CLASS_NAME, 'Checkbox_Label__3wxSf'
+    CANCEL_ORDER_BUTTON = By.XPATH, "//button[@class='Button_Button__ra12g Button_Middle__1CSJM Button_Inverted__3IF-i']"
+    LOGO_SCOOTER_BUTTON = By.XPATH, "//a[@class='Header_LogoScooter__3lsAR']"
+    LOGO_YANDEX_BUTTON = By.XPATH, "//a[@class='Header_LogoYandex__3TSOI']"
+    HOME_HEADER = By.XPATH, "//div[@class='Home_Header__iJKdX']"
+
+    INPUT_FIRST_NAME = By.XPATH, "//input[@placeholder='* Имя']"
+    INPUT_SECOND_NAME = By.XPATH, "//input[@placeholder='* Фамилия']"
+    INPUT_ADDRESS= By.XPATH, "//input[@placeholder='* Адрес: куда привезти заказ']"
+    INPUT_PHONE_NUMBER = By.XPATH, "//input[@placeholder='* Телефон: на него позвонит курьер']"
+    INPUT_DATE = By.XPATH, "//input[@placeholder='* Когда привезти самокат']"
+    INPUT_TIME_OF_RENT = By.XPATH, "//div[@class='Dropdown-control']"
+    FIRST_VAR_TIME_OF_RENT = By.XPATH, "//div[text()='сутки']"
+    INPUT_METRO_STATION = By.XPATH, "//input[@class='select-search__input']"
+    CHOOSE_METRO_STATION = By.XPATH, "//li[@data-index='0']"
+    CHOOSE_COLOR_SCOOTER = By.CLASS_NAME, 'Checkbox_Input__14A2w'
     INPUT_COMMENT = By.XPATH, './/input[@class = "Input_Input__1iN_Z Input_Responsible__1jDKN" and @placeholder = "Комментарий для курьера"]'
-    GO_BACK_BUTTON = By.CLASS_NAME, 'Button_Button__ra12g Button_Middle__1CSJM Button_Inverted__3IF-i'
-    SUBMIT_ORDER_BUTTON = By.CLASS_NAME, 'Button_Button__ra12g Button_Middle__1CSJM'
-    MODAL_WINDOW_SUBMIT_ORDER = By.CLASS_NAME, 'Order_Modal__YZ-d3'
-    NO_BUTTON_SUBMIT_ORDER = By.XPATH, ".//button[@class = 'Button_Button__ra12g Button_Middle__1CSJM Button_Inverted__3IF-i' and text() = 'Нет']"
-    YES_BUTTON_SUBMIT_ORDER = By.XPATH, ".//button[@class = 'Button_Button__ra12g Button_Middle__1CSJM' and text() = 'Да']"
+    MODAL_WINDOW_SUCCESSFUL_ORDER = By.XPATH, "//div[@class='Order_ModalHeader__3FDaJ']"
+    COOKIE_BUTTON = By.XPATH, "//button[text()='да все привыкли']"
+    ORDER_HEADER = By.XPATH, "//div[@class='Order_Header__BZXOb']"
+    DZEN = By.CLASS_NAME, 'dzen-desktop__widget-r2'
+

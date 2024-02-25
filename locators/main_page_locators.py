@@ -1,9 +1,23 @@
+
 from selenium.webdriver.common.by import By
 
 class MainPageLocators:
+    QUESTION_1 = By.ID, 'accordion__heading-0'
+    QUESTION_2 = By.ID, 'accordion__heading-1'
+    QUESTION_3 = By.ID, 'accordion__heading-2'
+    QUESTION_4 = By.ID, 'accordion__heading-3'
+    QUESTION_5 = By.ID, 'accordion__heading-4'
+    QUESTION_6 = By.ID, 'accordion__heading-5'
+    QUESTION_7 = By.ID, 'accordion__heading-6'
+    QUESTION_8 = By.ID, 'accordion__heading-7'
 
-    QUESTION_LOC = By.ID, 'accordion__heading-{}'
-    ANSWER_LOC = By.XPATH, ".//div[@aria-labelledby = 'accordion__heading-{}']"
-    ORDER_BUTTON_HEADER = By.CLASS_NAME, 'Button_Button__ra12g'
-    ORDER_BUTTON_MIDDLE_PAGE = By.CLASS_NAME, 'Button_Button__ra12g Button_Middle__1CSJM'
-    SCROLL_LOCATOR = By.XPATH, ".//div[@class= 'Home_SubHeader__zwi_E' and text() = 'Вопросы о важном']"
+    ANSWER_1 = By.ID, 'accordion__panel-0'
+    ANSWER_2 = By.ID, 'accordion__panel-1'
+    ANSWER_3 = By.ID, 'accordion__panel-2'
+    ANSWER_4 = By.ID, 'accordion__panel-3'
+    ANSWER_5 = By.ID, 'accordion__panel-4'
+    ANSWER_6 = By.ID, 'accordion__panel-5'
+    ANSWER_7 = By.ID, 'accordion__panel-6'
+    ANSWER_8 = By.ID, 'accordion__panel-7'
+    
+    COOKIE_BUTTON = By.XPATH, "//button[text()='да все привыкли']"
