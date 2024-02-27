@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 import datetime
 import random
+from locators.order_page_locators import OrderPageLocators as OPL
 
 
 class TextOfQuestion:
@@ -26,24 +27,13 @@ class OrderData:
     COMMENT = random.choice(['Вингардиум левиоса', 'Акцио', 'Авада', 'Пельмени'])
     METRO_STATION = random.choice(["Черкизовская", "Фили", "Теплый стан", "ВДНХ"])
 
-    locators_time_rent  = [
-    (By.XPATH, "//div[text()='сутки']"),
-    (By.XPATH, "//div[text()='двое суток']"),
-    (By.XPATH, "//div[text()='трое суток']"),
-    (By.XPATH, "//div[text()='четверо суток']"),
-    (By.XPATH, "//div[text()='пятеро суток']"),
-    (By.XPATH, "//div[text()='шестеро суток']"),
-    (By.XPATH, "//div[text()='семеро суток']")]
+    
 
-    TIME_OF_RENT = random.choice(locators_time_rent)
+    TIME_OF_RENT = random.choice(OPL.LOCATORS_TIME_RENT)
 
-    locators_check_box_color = [
-        (By.ID, 'black'),
-        (By.ID, 'grey'),
+    
 
-         ]
-
-    COLOR_OF_SCOOTER = random.choice(locators_check_box_color)
+    COLOR_OF_SCOOTER = random.choice(OPL.LOCATORS_CHECK_BOX_COLOR)
 
 
     

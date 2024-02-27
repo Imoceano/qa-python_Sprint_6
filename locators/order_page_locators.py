@@ -32,3 +32,15 @@ class OrderPageLocators:
     ORDER_HEADER = By.XPATH, "//div[@class='Order_Header__BZXOb']"
     DZEN = By.CLASS_NAME, 'dzen-desktop__widget-r2'
 
+    LOCATORS_TIME_RENT  = [
+    (By.XPATH, "//div[text()='сутки']"),
+    (By.XPATH, "//div[text()='двое суток']"),
+    (By.XPATH, "//div[text()='трое суток']"),
+    (By.XPATH, "//div[text()='четверо суток']"),
+    (By.XPATH, "//div[text()='пятеро суток']"),
+    (By.XPATH, "//div[text()='шестеро суток']"),
+    (By.XPATH, "//div[text()='семеро суток']")]
+
+    LOCATORS_CHECK_BOX_COLOR = [
+        (By.ID, 'black'),
+        (By.ID, 'grey') ]
