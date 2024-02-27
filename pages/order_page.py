@@ -33,9 +33,9 @@ class OrderPage(BasePage):
 
     @allure.step("Переход к логотипам")
     def go_to_logo(self, button, index):
-        self.driver.get(Urls.ORDER_PAGE_URL)
+        self.get_url(Urls.ORDER_PAGE_URL)
         self.click_on_element(button)
-        self.driver.switch_to.window(self.driver.window_handles[index])
+        self.switch_window(index)
     
     @allure.step("Ожидание появления элемента на странице")
     def wait_for_true_page(self,locator):

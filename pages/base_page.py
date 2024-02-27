@@ -30,3 +30,8 @@ class BasePage:
     def scroll_to_element(self, element):
         self.driver.execute_script("arguments[0].scrollIntoView();", element) #Скролл к элементу
 
+    def get_url(self,url):
+        self.driver.get(url)
+
+    def switch_window(self,element):
+        self.driver.switch_to.window(self.driver.window_handles[element])
