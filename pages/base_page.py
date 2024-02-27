@@ -35,3 +35,6 @@ class BasePage:
 
     def switch_window(self,element):
         self.driver.switch_to.window(self.driver.window_handles[element])
+    
+    def check_element_on_page(self,locator):
+        self.driver.is_element_present(locator)

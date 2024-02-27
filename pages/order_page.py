@@ -37,6 +37,11 @@ class OrderPage(BasePage):
         self.click_on_element(button)
         self.switch_window(index)
     
+ 
+    @allure.step("Проверить что элемент есть на странице")
+    def check_the_button_on_page(self,locator):
+        self.check_element_on_page(locator)
+        
     @allure.step("Ожидание появления элемента на странице")
     def wait_for_true_page(self,locator):
         self.find_element_with_wait(locator)
@@ -47,4 +52,7 @@ class OrderPage(BasePage):
         self.click_on_element(OrderLoc.CONFIRM_BUTTON)
         self.modal_window_text = self.find_element_with_wait(OrderLoc.MODAL_WINDOW_SUCCESSFUL_ORDER).text
     
-    
+    @allure.step("Проверить есть ли искомый элемент на странице")
+    def is_element_present_on_page(self, locator):
+        element_on_page = self.find_element_with_wait(locator)
+        return element_on_page
